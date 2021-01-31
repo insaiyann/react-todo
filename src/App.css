@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background:rgb(113, 241, 241);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-app {
   display: flex;
   flex-direction: column;
+  /* justify-content: start; */
+  width: 1000px;
+  min-height: 30px;
+  background: #0b2693;
+  text-align: center; 
+  margin: 100px auto;
+  border-radius: 100px;
+  padding-bottom: 30px;
+}
+
+h1 {
+  margin: 30px 0;
+  color: #fff;
+  font-size: 30px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 20px 0 0 20px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 500px;
+  background: transparent;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #efd7d7;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  outline: none;
+  background:rgb(74, 255, 116);
+  color: rgb(63, 15, 15);
+}
+
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+
+.todo-button.edit {
+  background:rgb(76, 156, 255);
+  padding: 16px 22px;
+}
+
+.todo-container {
+  /* display: flex;  */
+  /* flex-direction: row; */
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 4px auto;
+  color: black;
+  background:rgb(202, 245, 139);
+  padding: 16px;
+  border-radius: 30px;
+  width: 80%;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.delete-icon {
+  margin-right: 5px;
+  color: rgb(0, 0, 0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit-icon {
+  color: rgb(0, 0, 0);
 }
